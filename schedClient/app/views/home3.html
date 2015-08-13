@@ -1,0 +1,29 @@
+<div class="[ container container-fluid ]">
+    <div class="[ row ]">
+        <div class="[ col-md-6 ]" role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="[ nav nav-justified container container-fluid]" id="nav-tabs" role="tablist">
+                <li ng-repeat="employee in vm.Employees" id={{employee._id}}>
+                    <a role="tab" data-toggle="tab" ng-click="vm.EmployeeClick($index)">
+                        <img class="img-circle" src={{vm.Employees[$index].ImgUrl}} />
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                    </a>
+                </li>    
+            </ul>
+        </div>
+        <div class="[ col-md-6 ]">
+            <div class="row">    
+                <!-- Tab panes -->
+                <div class="tab-content well">                    
+                    <p class="lead panel">Name: {{vm.ActiveEmployee.FullName}}</p>
+                    <p><strong class="text-uppercase">Email: {{vm.ActiveEmployee.Email}}</strong></p>
+                    <p><em class="text-capitalize">Phone: {{vm.ActiveEmployee.Phone}}</em></p>       
+                </div>
+                <div class="container container-fluid row">
+                    <div  class="fc" ui-calendar="vm.CalendarConfig" ng-model="vm.Events" calendar="schedCalendar"></div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+
