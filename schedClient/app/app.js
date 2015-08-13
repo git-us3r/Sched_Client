@@ -2,12 +2,12 @@
 
     'use strict';
 
-    var app = angular.module("schedClient", ["ui.router", "ui.calendar"]);
+    var app = angular.module("schedClient", ["ui.router", "ui.calendar", "ngRoute", "ngAnimate"]);
 
     app.config(["$stateProvider", "$urlRouterProvider",
         function($stateProvider, $urlRouterProvider){
 
-            $urlRouterProvider.otherwise("login");
+            $urlRouterProvider.otherwise("landing");
 
             $stateProvider
                 .state("userDash", {
@@ -29,6 +29,11 @@
                     url: "/login",
                     templateUrl: "app/views/login.html",
                     controller: "LoginCtrl as vm"
+                })
+                .state("landing", {
+                    url: "/landing",
+                    templateUrl: "app/views/landing.html",
+                    controller: "LandingCtrl as vm"
                 })
 
         }]

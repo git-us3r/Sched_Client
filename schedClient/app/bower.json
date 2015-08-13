@@ -1,0 +1,20 @@
+{
+  "name": "XSchedule",
+  "main": "app.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/git-us3r/Sched_Client",
+  "authors": [
+    "Miguel Lopez <mlopez4@mmm.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.4"
+  }
+}
